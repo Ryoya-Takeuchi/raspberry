@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" charset="utf-8">
+    <title>Raspberry Pi ラジコン戦車コントローラー</title>
+    <video id="video" autoplay playsinline></video>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./webiopi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        button {
+            font-size: 14pt;
+            font-weight: bold;
+            color: white;
+            border: black 3px solid;
+            width: 60px;
+            height: 30px;
+            padding: 0 0 0 0;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <video id="myVideo" width="500" height="500" autoplay="1" ></video>
+    <table>
+        <tr>
+            <td>
+                <table border=1 cellspacing="10" cellpadding="0">
+                    <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <div id="tank-f"></div>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="tank-l"></div>
+                        </td>
+                        <td>
+                            <div id="tank-s"></div>
+                        </td>
+                        <td>
+                            <div id="tank-r"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <div id="tank-b"></div>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <div class="spf-controller">
+        <button class="btn ear ear-left"></button>
+        <button class="btn ear ear-right"></button>
+        <div class="controller-left">
+            <div class="cross-layout">
+                <button  class="position-top btn cross-key-btn"><span  class="top-mark">▲</span></button>
+                <button class="position-left btn cross-key-btn"><span class="left-mark">▲</span></button>
+                <button class="position-center btn cross-key-btn"><span class="center-mark">●</span></button>
+                <button class="position-right btn cross-key-btn"><span class="right-mark">▲</span></button>
+                <button class="position-bottom btn cross-key-btn"><span class="bottom-mark">▲</span></button>
+            </div>
+        </div>
+        <div class="controller-center">
+            <span class="logo-msg">Controller</span>
+            <div class="selectstart-btn-set">
+                <button class="btn selectstart-btn"></button>
+                <button class="btn selectstart-btn"></button>
+            </div>
+        </div>
+        <div class="controller-right">
+            <div class="abxy-btn-set">
+                <div class="cross-layout">
+                    <button class="btn abxy-btn position-top btn-x">X</button>
+                    <button class="btn abxy-btn position-left btn-y">Y</button>
+                    <button class="btn abxy-btn position-right btn-a">A</button>
+                    <button class="btn abxy-btn position-bottom btn-b">B</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
